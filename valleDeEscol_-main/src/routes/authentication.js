@@ -2,7 +2,7 @@ const express =require('express');
 const router = express.Router();
 const inicioSchema=require("../models/usuario");   
     
-router.post("/iniciar_Sesion", (req,res)=>{
+router.post("/iniciar_Sesion", async(req,res)=>{
     const {nombre_usuario, contraseña_usuario, correo_usuario} = req.body;
     const usuario = inicioSchema({
         nombre_usuario : nombre_usuario,

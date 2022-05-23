@@ -1,14 +1,13 @@
 const parser = require("body-parser");
 const express = require("express");
 const app= express();
-const port=7000;
+const port=3000;
 //rutas archivos js
-const rutasInicio = require("./routes/iniciar_Sesion");  
 const rutaClientes = require("./routes/cliente");
 const rutaProducto = require("./routes/producto"); 
 const rutaProvedor = require("./routes/provedores");
 const rutaFactura = require("./routes/facturas");
-const authRoutes = require("./routes/authentication");
+const rutasInicio = require("./routes/authentication");
 const mongoose= require("mongoose");
 require ('dotenv').config();
 
@@ -20,7 +19,6 @@ app.use("/api", rutaClientes);
 app.use("/api", rutaProducto);
 app.use("/api", rutaProvedor);
 app.use("/api", rutaFactura);
-app.use("/api", authRoutes);//ruta validacion autenticar
 app.use(express.json());
 
 //conexión base de datos

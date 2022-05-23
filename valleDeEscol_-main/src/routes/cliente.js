@@ -11,7 +11,7 @@ router.post("/cliente", (req,res) => {
      .catch((error)=>res.json({message: error}));
  });
  
- module.exports = router;
+ 
 
  //consultar clientes
  router.get("/cliente", ( req, res) => {
@@ -50,3 +50,5 @@ router.post("/cliente", (req,res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error}));
  });
+
+ module.exports = router;
