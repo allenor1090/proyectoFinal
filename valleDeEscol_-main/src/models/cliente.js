@@ -17,7 +17,7 @@ const clientSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    nit:{
+    identificacion:{
         type:Number,
         required:true
     }
