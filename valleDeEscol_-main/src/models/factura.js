@@ -17,7 +17,7 @@ const facturaSchema = mongoose.Schema({
         required: true
     },
     valor_factura: {
-        typeof: mongoose.Types.ObjectId,
+        type: Number,
         requiered: true
     }
 });
