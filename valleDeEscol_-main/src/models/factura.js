@@ -7,12 +7,12 @@ const facturaSchema = mongoose.Schema({
 
     },
     usuario_factura: {
-        type: mongoose.Types.ObjectId,
+        type: String,
         ref: 'cliente',
         required: true
     },
     producto_factura: {
-        type: mongoose.Types.ObjectId,
+        type: String,
         ref: 'Producto',
         required: true
     },
